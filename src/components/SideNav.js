@@ -1,5 +1,5 @@
 import React from "react";
-// import {Link} from "react-router-dom";
+import {Link, Router} from "react-router-dom";
 
 function SideNav() {
   return (
@@ -8,14 +8,19 @@ function SideNav() {
         <li className="active">
           {/*
           <Link to="/"> <i className="fa fa-fw fa-dashboard" />
-            Dashboard 
+            Dashboard
           </Link>
           */}
         </li>
         <li>
-          <a href="charts.html">
+          <Link to={"/charts"}>
             <i className="fa fa-fw fa-bar-chart-o" /> Charts
-          </a>
+          </Link>
+        </li>
+        <li>
+          <Link to={"/settings"}>
+            <i className="fa fa-fw fa-bar-chart-o" /> Settings
+          </Link>
         </li>
         <li>
           <a href="tables.html">
@@ -23,7 +28,9 @@ function SideNav() {
           </a>
         </li>
       </ul>
-    </div>);  
+    </div>
+    );
+
 }
 
 export default SideNav;
